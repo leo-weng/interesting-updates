@@ -1,0 +1,22 @@
+Innovation Endeavors debuts Deep Life, an incubator focused on the intersection of life science and computer science
+====================================================================================================================
+
+Innovation Endeavors,  the fund backed by Google’s  Eric Schmidt, has for years now been taking a novel approach to working on difficult and still-evolving problems, like cybersecurity and food shortages: it sets up incubators that bring together different stakeholders to identify, develop and fund ways of tackling these issues. Today, Innovation unveiled the latest of these: a new project called Deep Life, which aims to identify tricky problems in the world of life sciences, and figure out how to use computer science — specifically innovations in areas like machine learning — to help fix them.
+
+Target areas will include therapeutics, diagnostics and industrial life sciences in biology, chemistry and other fields; and Deep Life will provide startups with “investment capital across all stages of growth; access to experts, including scientists and decision-makers; proprietary data sets; early feedback on product; identification of market needs; initial customers and potential partners. In exchange for their startup support, Deep Life member organizations gain access to emerging technologies and hard-to-find talent,” according to a blog post introducing the new project penned by Innovation Endeavors’ co-founder Dror Berman.
+
+Deep Life will unveil the first fruits of its efforts during a pitch day on May 30, and it’s accepting applications for places as of right now.
+
+Alternately called an “ecosystem” and “collective,” Deep Life — in the words of Berman — is “taking inspiration” from Farm2050 and Team8, the two other incubators that the firm helped create in past years. The model is to bring in a number of big names and then — in addition to building on ideas — fund startups to productise them. Eventually, they are spun out as independent companies that get acquired (here and here) or continue to operate independently.
+
+As with these two other incubators, Deep Life is harnessing collective knowledge from a number of existing stakeholders in the life sciences ecosystem. The list includes LEO Pharma, a Danish pharmaceutical company focusing on pioneering dermatology; Mount Sinai Hospital; Novozymes, a producer of industrial enzymes and microorganisms for a broad range of industries; Schmidt Futures; Clalit Health Services & Research Institute in Israel; and academics, entrepreneurs and others, including Aviv Regev, a computational biologist and faculty chair of the Broad Institute of MIT and Harvard.
+
+Additionally, Innovation Endeavors says that it will be tapping learnings from startups it has already backed, including Bolt Threads,  Color, Freenome, GRO Biosciences, Karius, Vicarious Surgical, Viz.ai and Zymergen.
+
+In all, it’s not clear how much funding is going into Deep Life, and whether the two lists above also become financial backers of the project. Separately, Innovation Endeavors last summer announced a $333 million fund and plans to contribute a sizeable amount of backing itself to Deep Life, from what I understand.
+
+The intersection between tech and life sciences is, of course, not a completely new area. Tech has been a cornerstone of how science has developed and how applications of it are delivered, for example in medicine.
+
+What’s a little different here is the much closer focus on the role that tech is playing in the very germination of ideas and building knowledge, rather than just enabling the efficient operation of a service.
+
+Among the areas that Deep Life tells me it hopes to cover are the use of experimental design (active learning) to uncover biological knowledge; generating data sets that are more effective than current approaches; the application of simple measurements to generate complex, high-content readouts through generative models; combining data modalities (e.g. molecular and imaging-based complex phenotypes); simplifying data readouts to help predict outcomes (using AI); adding to the molecular vocabulary of cells, host organisms and their subcomponents; and building data platforms for biology growing from distributed, asynchronous efforts into an open source whole.

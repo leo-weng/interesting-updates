@@ -1,0 +1,64 @@
+
+                What Astroneer's devs learned while leaving Early Access
+                                            
+======================================================================================================================
+
+No game has it easy going through Early Access, but when the developers of Astroneer set out to make their space sandbox game, they didn't just wind up building a game -- they had to build a whole company and procedural generation tech as well. After a few hard-fought years, Astroneer finally exited Early Access, and now the devs at System Era Softworks are able to look back and understand just what they went through. 
+
+Recently on the GDC Twitch channel, System Era Softworks co-founder Brendan Wilson dropped by for a livestream of Astroneer, breaking down both the theory behind the game's breakable voxel planets, and some of the lessons he and his collaborators picked up building a company around Early Access development. Here are excerpts of that conversation, in Wilson's own words.
+
+So there’s sort of two things that you touched on there. One is how the artists actually generated the planets and how do they put their artistic touch into this procedural generation system and also how you mentioned the smooth response to deformation. 
+
+The terrain system’s gone through two major iterations. The system we shipped Early Access with back in 2016 looked quite a bit different than the system that we have now. The system we have now is way more powerful in terms of the artists getting the look that they want and allowing us to create all the environments that we have now. So the Early Access game originally was, we could kind of create the surface of a planet and we could create a layer of caves underneath the surface but we couldn’t do much more than that, not easily. 
+
+
+
+It was hard to update without totally breaking peoples’ save games. The new system has, the planet is populated with stuff all the way down to the core and we can create really exotic kind of shapes and biomes. and it’s also much easier to update. So we can add and change the algorithms that define the planet landscape without actually breaking peoples’ save games. 
+
+Both systems share some characteristics. Essentially It’s a voxel system so think of something like Minecraft. The entire world is made up of a grid of 3D voxels. And then each voxel stores certain data so in our case it’ll be density data that defines whether there’s ground there or open air.
+
+We define the voxel data and then that voxel data… In [a game like] Minecraft, once you have your voxels you pretty much have everything. You just render a block where there’s a voxel and the block has, typically has in a game like Minecraft, would have an integer index that determines what type of block that is. 
+
+In our game because we don’t have blocks we have kind of a smooth surface, it’s a bit little more complicated, the data’s a little heavier. The basic algorithm is that each voxel stores a density value and that density value has a range and it can be positive or it can be negative. If it’s negative it means that there’s open air, if it’s positive it means that there’s solid ground in that space. 
+
+Where that crossover happens between positive and negative is where the surface is going to be. and so we run that voxel data through a poliginizing algorithm. We use one called marching cubes, it’s very very common, it's one of the most common we use to do this kind of quick poliginization, and that produces the actual geometry surface that you see and will generate collision for that and so forth. 
+
+So when you’re deforming, you’re just modifying the voxel data. We don’t really have to look at the actual mesh data, we just have to look at the voxel data, apply some transforms to it, so its subtracting or adding from that density, and then rerun the polginization for that chunk so the ground is divided into chunks at a certain granularity, so that we don’t have to rebuild the mesh for like planet every time, we just rebuild the small area you’re standing on. And that’s basically how it works.
+
+We like to joke that we decided to make the hardest possible game on all dimensions. So like the wisdom, if you go to GDC and you talk to a lot of developers, especially indie developers, a lot of the advice is kind of like ‘pick kind of one thing that you do that’s different and focus on that, and everything else just do the easy way.’ And we were like man, in hindsight, we picked the hard way on everything. 
+
+
+
+It’s been challenging because, I mean it's procedurally generated and the challenge there is always how do you give players a different experience each time they play but also one that’s not completely uniform to the point that its not completely uniform and drab and where you’ve seen one area you’ve seen them all. 
+
+Because it’s so procedural, and because you can deform all the terrain, a lot of the techniques that triple-a games use to make everything run super fact which typically involve a lot of offline processing. If you know what your map is going to look like and the layout of your level and all the textures and meshes that are going to go into it, you can do a ton of offline work so that the game is relieved of a lot of computations at run time. 
+
+You can do light map baking and stuff like that, you can do offline visibility analysis which means from every point in the level you know know what things are visible so you can really efficiently render. We can’t do any of that in a procedural game, so it makes it really hard sometimes to optimize to the extent that we would like to. 
+
+And then of course, there’s other things like we’ve got these huge environments, you’re traveling between planets, the planets are spherical so gravity doesn’t even happen in one direction which is surprisingly…you’d think that that's relatively straightforward, but it's one of those annoying things but the fact that gravity is typically -1 on the y or z access is hardcoded everywhere so that becomes a big pain. 
+
+It's hard, I would say it like doubles the challenge because when you’re working on a game that is unannounced or is at least not in players hands, you can just break everything every day or if something’s not working just completely throw it out, redesign it overnight. When you’re in Early Access, even though the, you know the ostensible point of Early Access is to bring players into a development process where the game is going to be evolving, changing, potentially drastically over time. The reality is you’re just in live support mode fora live game, and you’ve kind of got to treat it that way.
+
+And being on Xbox it meant that we had to go through… It was very very similar to just being a fully released game. We still had the requirements to go through, sort of [certification checks] to get updates out. We had to have all of our ducks in a row in terms of publishing, in terms of store presence. And then you know you have a community to manage, and even though you’re in Early Access people develop their favorite features, it becomes very difficult to make certain changes without disappointing certain people. And the speed at which you can work is definitely slowed down, because each and every update has to keep the game going. You can’t break the game. To the greatest extent possible. 
+
+
+
+And we had, throughout Early Access, kind of a caveat saying that each update has the potential to disrupt your save game. We’re not guaranteeing that everything’s always fully backward compatible. We had a few updates that were pretty big changes, like we completely changed the base building paradigm at one point so we had to write some code that would give you some credit for the old base that you had. And that takes some toll on development. I’d estimate it took us probably twice as long to make this game as we’re playing today as it would if we were not in Early Access, if we were not trying to sustain the game through monthly, or every six weeks you have an update.
+
+The original way I put this was that it was the only option, or the best option we had, to maintain control over development without bringing in a publisher or something like that. We have a really great community, like a very supportive community. So from that perspective it’s been very nice to learn how to work with our community and learn how to take their feedback. And it’s also given us the opportunity to learn. 
+
+It should be said that when we started, I think when we launched into early access, System Era was not a company in like the traditional sense of a game company. We didn’t have like an office, we didn’t have anything. We didn’t have a QA team, we didn’t have a support line. It was practically a bunch of guys in like a garage band set up kind of thing.
+
+The process of early access for us on Astroneer has been as much to build System Era and learn how to be System Era as it had to build the game. 
+
+We certainly don’t want to be as closeted as most triple-A developers are. We were used to working on teams. I came from, myself and 2 of the other founders, we had met each other through working on Halo at Microsoft at 343 Industries. Adam the other co founder he worked at Ubisoft, and Riley who’s our 5th and our sound designer he came from working at EA. So we all worked at huge companies, with hundreds of people at these studios, and in those other studios as an individual developer you have no interaction with the community at all. 
+
+You are told that you are not allowed to say anything, and there are dire consequences if you go talking about the game or even if the game’s released saying the wrong thing. And so from that perspective, we definitely don’t want to go back to that. The relationship and kind of interaction that we’ve developed with our community, is something that we cherish and we want to hold on to that. 
+
+As far as whether we’ll do Early Access again, it's just a decision about how it's going to be and how we’re going to deliver the best product to that community in most efficiently. I think early access has kind of a bad reputation now, so I don’t know if its a great…I mean it was developing a bad reputation when we started. For a lot of games that would start early access and never finish, never come out of it. People would say “oh we gave our money to these guys and the game is dead, we’re never going to see anything for it.” 
+
+I think if we do Early Access again, we’d like to sort of shorten the cycle and try to present a game when it enters Early Access that’s closer to a finished product. I think Astroneer needed so much work when we started. And there were so many other games going through Early Access that were maybe more representative of a finished product that people were maybe not used to having to go through as much iteration as we did.
+
+### Related Jobs
+
+### Top Stories
